@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorval Hair & Skin Makeover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #faf8f6;
+            --gold: #c4a574;
+            --dark: #2a2a2a;
+            --light-blush: #f5e6e0;
+            --text-primary: #3a3a3a;
+            --text-secondary: #6b6b6b;
+            --border-light: #e8e0d8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--cream);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Hero */
+        header {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border-light);
+            padding: 28px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(250, 248, 246, 0.95);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+        }
+
+        .logo span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            font-size: 0.9em;
+        }
+
+        .phone-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid var(--gold);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .phone-link:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 120px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1em;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 16px 48px;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            font-size: 1em;
+            transition: all 0.4s ease;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        .cta-primary:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        /* Info Cards */
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            margin: 80px 0;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 0;
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .info-card .accent-line {
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            margin: 16px auto 20px;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-size: 1em;
+        }
+
+        .phone-display {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: var(--gold);
+            margin-top: 12px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            color: var(--dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header .accent-line {
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 48px 32px;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: var(--dark);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .service-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Special Service */
+        .special-service {
+            background: var(--light-blush);
+            padding: 60px 40px;
+            margin-top: 60px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .special-service h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+            font-size: 1.5em;
+            margin-bottom: 12px;
+        }
+
+        .special-service p {
+            color: var(--text-secondary);
+            font-size: 1em;
+        }
+
+        /* Divider */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 80px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0;
+            margin-top: 100px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin: 8px 0;
+            opacity: 0.8;
+            font-size: 0.95em;
+        }
+
+        .footer-divider {
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .header-contact {
+                flex-direction: column;
+                gap: 8px;
+                font-size: 0.85em;
+            }
+
+            .info-section {
+                gap: 32px;
+                padding: 40px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .service-card {
+                padding: 32px 24px;
+            }
+
+            .special-service {
+                padding: 40px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .phone-link {
+                padding: 6px 12px;
+                font-size: 0.85em;
+            }
+        }
+
+        /* Q&A Section Styles */
+.qa-section {
+    padding: 100px 0;
+    background: var(--cream);
+}
+
+.qa-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.qa-item {
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 0;
+}
+
+.qa-question {
+    width: 100%;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+    color: var(--dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.qa-question:hover {
+    color: var(--gold);
+}
+
+.qa-icon {
+    color: var(--gold);
+    font-size: 1.5em;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.qa-question.active .qa-icon {
+    transform: rotate(45deg);
+}
+
+.qa-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0;
+}
+
+.qa-answer.show {
+    max-height: 300px;
+    padding-bottom: 24px;
+}
+
+.qa-answer p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1em;
+}
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Dorval</a>
+                <div class="header-contact">
+                    <span>Perinthalmanna, Kerala</span>
+                    <a href="tel:+919292223892" class="phone-link">+91 92922 23892</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hair & Skin Makeover</h1>
+            <p class="subtitle">Crafted beauty for every moment</p>
+            <a href="tel:+919292223892" class="cta-primary">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- Info Cards -->
+    <div class="container">
+        <div class="info-section">
+            <div class="info-card">
+                <h3>Call Us</h3>
+                <div class="accent-line"></div>
+                <p class="phone-display">+91 92922 23892</p>
+                <p style="font-size: 0.9em; margin-top: 8px;">Available to discuss your beauty needs</p>
+            </div>
+            <div class="info-card">
+                <h3>Hours</h3>
+                <div class="accent-line"></div>
+                <p style="font-size: 1.1em; font-weight: 500;">10:00 AM — 12:00 AM</p>
+                <p style="font-size: 0.9em; margin-top: 8px;">Open 7 Days a Week</p>
+            </div>
+            <div class="info-card">
+                <h3>Location</h3>
+                <div class="accent-line"></div>
+                <p>Bypass Rd, Dubaipadi<br>Kakkoth, Perinthalmanna<br>Kerala 679322</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="services-grid">
+                <!-- Makeup -->
+                <div class="service-card">
+                    <h3>Makeup Artistry</h3>
+                    <ul class="service-list">
+                        <li>Bridal Makeup</li>
+                        <li>Photography Makeup</li>
+                        <li>Special Occasion Makeup</li>
+                        <li>Men's Makeup</li>
+                        <li>Groom's Styling</li>
+                    </ul>
+                </div>
+
+                <!-- Hair Services -->
+                <div class="service-card">
+                    <h3>Hair Services</h3>
+                    <ul class="service-list">
+                        <li>Hairstyling</li>
+                        <li>Hair Treatments</li>
+                        <li>Professional Haircut</li>
+                        <li>Shampoo & Conditioning</li>
+                        <li>Dandruff Treatment</li>
+                    </ul>
+                </div>
+
+                <!-- Skin Care -->
+                <div class="service-card">
+                    <h3>Skin & Threading</h3>
+                    <ul class="service-list">
+                        <li>Eyebrow Threading</li>
+                        <li>Eyebrow Shaping</li>
+                        <li>Professional Facials</li>
+                        <li>Skincare Treatments</li>
+                        <li>Waxing</li>
+                        <li>De Tan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Special Service Highlight -->
+            <div class="special-service">
+                <h4>Bridal & Groom Services</h4>
+                <p>We bring our expertise to your venue. Complete makeup and styling services for your special moments—wherever you are.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+<section class="qa-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="qa-container">
+            <!-- Question 1 -->
+            <div class="qa-item">
+                <button class="qa-question" onclick="toggleAnswer(this)">
+                    <span>Do I need to book an appointment before visiting?</span>
+                    <span class="qa-icon">+</span>
+                </button>
+                <div class="qa-answer">
+                    <p>Appointments are recommended to avoid waiting, especially on weekends and during festive seasons. Walk-ins are also welcome based on availability.</p>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="qa-item">
+                <button class="qa-question" onclick="toggleAnswer(this)">
+                    <span>Do you offer bridal packages?</span>
+                    <span class="qa-icon">+</span>
+                </button>
+                <div class="qa-answer">
+                    <p>Yes, we offer bridal makeup packages tailored to different styles, occasions, and budgets. Call us to discuss your requirements.</p>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="qa-item">
+                <button class="qa-question" onclick="toggleAnswer(this)">
+                    <span>How do I book an appointment?</span>
+                    <span class="qa-icon">+</span>
+                </button>
+                <div class="qa-answer">
+                    <p>You can call us at +91 92922 23892 or message us on WhatsApp. We're open from 10 AM to 12 AM daily. Walk-ins are also welcome.</p>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="qa-item">
+                <button class="qa-question" onclick="toggleAnswer(this)">
+                    <span>How early should I book bridal makeup services?</span>
+                    <span class="qa-icon">+</span>
+                </button>
+                <div class="qa-answer">
+                    <p>We recommend booking several weeks in advance, especially during wedding season.</p>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="qa-item">
+                <button class="qa-question" onclick="toggleAnswer(this)">
+                    <span>Do you provide makeup services at the wedding venue?</span>
+                    <span class="qa-icon">+</span>
+                </button>
+                <div class="qa-answer">
+                    <p>Yes, venue services may be available depending on the package and location. Call for availability and pricing.</p>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="qa-item">
+                <button class="qa-question" onclick="toggleAnswer(this)">
+                    <span>What products do you use?</span>
+                    <span class="qa-icon">+</span>
+                </button>
+                <div class="qa-answer">
+                    <p>We use premium, professional-grade cosmetics and skincare products that are safe and suitable for all skin types. All our products are carefully selected for quality and safety.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4em; margin-bottom: 8px;">Dorval Hair & Skin Makeover</h3>
+                <div class="footer-divider"></div>
+                <p>Professional beauty services in Perinthalmanna</p>
+                <p style="margin-top: 20px; font-size: 0.9em;">Bypass Rd, Dubaipadi, Kakkoth • +91 92922 23892</p>
+                <div style="margin-top: 24px; display: flex; justify-content: center; gap: 20px;">
+                    <a href="https://www.instagram.com/dorval____" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.5em; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/919292223892" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.5em; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.2)';" onmouseout="this.style.transform='scale(1)';">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <p style="margin-top: 24px; opacity: 0.6; font-size: 0.85em;">&copy; 2025 Dorval. Crafted with care.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+function toggleAnswer(button) {
+    const answer = button.nextElementSibling;
+    button.classList.toggle('active');
+    answer.classList.toggle('show');
+}
+</script>
+</body>
+</html>
