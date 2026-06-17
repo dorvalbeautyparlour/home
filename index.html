@@ -99,13 +99,17 @@
 
         /* Hero Section */
 .hero {
-    padding: 80px 0 235px;
+    min-height: 100vh;  /* Full viewport height */
+    padding: 80px 20px 120px;
     text-align: center;
     background-image: url('dorval_hero_1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+    position: relative;
+    display: flex;  /* Center content vertically */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Overlay to make text readable */
@@ -386,14 +390,17 @@
             }
         }
 
-        @media (max-width: 480px) {
-            .hero {
-                padding: 60px 0 80px;
-            }
+        @media (max-width: 768px) {
+    .hero {
+        min-height: auto;  /* Don't force full height on mobile */
+        padding: 60px 20px 80px;
+        background-attachment: scroll;  /* Parallax doesn't work well on mobile */
+    }
 
-            .hero h1 {
-                font-size: 1.8em;
-            }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+}
 
             .phone-link {
                 padding: 6px 12px;
